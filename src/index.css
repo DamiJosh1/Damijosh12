@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AI Productivity Assistant Design System - Professional & Modern */
+
+@layer base {
+  :root {
+    /* Base colors - Modern light theme */
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+    --surface: 210 20% 96%;
+    --surface-elevated: 210 20% 94%;
+
+    /* Card system */
+    --card: 210 20% 96%;
+    --card-foreground: 222 47% 11%;
+    --card-elevated: 210 20% 94%;
+
+    /* Interactive elements */
+    --popover: 210 20% 96%;
+    --popover-foreground: 222 47% 11%;
+
+    /* AI Brand colors - Modern blue gradient theme */
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 20% 98%;
+    --primary-muted: 221 83% 85%;
+    
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 20% 98%;
+    
+    /* Accent colors for highlights */
+    --accent: 262 83% 58%;
+    --accent-foreground: 210 20% 98%;
+    --accent-muted: 262 83% 90%;
+
+    /* Neutral tones */
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    
+    /* Status colors */
+    --success: 142 76% 36%;
+    --success-foreground: 210 20% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 210 20% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 98%;
+
+    /* Borders and inputs */
+    --border: 217 33% 88%;
+    --input: 217 33% 94%;
+    --ring: 221 83% 53%;
+
+    /* Gradients for AI theme */
+    --gradient-primary: linear-gradient(135deg, hsl(221 83% 53%), hsl(262 83% 58%));
+    --gradient-secondary: linear-gradient(135deg, hsl(210 20% 96%), hsl(210 20% 94%));
+    --gradient-accent: linear-gradient(135deg, hsl(221 83% 85%), hsl(262 83% 90%));
+    
+    /* Shadows for depth */
+    --shadow-sm: 0 1px 2px 0 hsl(222 47% 11% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(222 47% 11% / 0.1), 0 2px 4px -1px hsl(222 47% 11% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(222 47% 11% / 0.1), 0 4px 6px -2px hsl(222 47% 11% / 0.05);
+    --shadow-glow: 0 0 20px hsl(221 83% 53% / 0.3);
+
+    /* Animation variables */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  
+  .dark {
+    /* Base colors */
+    --background: 248 16% 10%;         /* deep blackish purple */
+    --foreground: 0 0% 100%;           /* white */
+
+    /* Surfaces */
+    --surface: 248 16% 13%;            /* slightly lighter than background */
+    --surface-elevated: 248 16% 16%;   /* even lighter */
+
+    /* Card system */
+    --card: 248 16% 13%;
+    --card-foreground: 0 0% 100%;
+    --card-elevated: 248 16% 16%;
+
+    /* Interactive elements */
+    --popover: 248 16% 13%;
+    --popover-foreground: 0 0% 100%;
+
+    /* Purple accent and primary */
+    --primary: 262 83% 58%;            /* vibrant purple */
+    --primary-foreground: 0 0% 100%;
+    --primary-muted: 262 83% 80%;
+
+    /* Secondary (grey) */
+    --secondary: 240 6% 20%;           /* dark grey */
+    --secondary-foreground: 0 0% 100%;
+
+    /* Accent colors */
+    --accent: 262 83% 70%;             /* lighter purple */
+    --accent-foreground: 0 0% 100%;
+    --accent-muted: 262 83% 80%;
+
+    /* Neutral tones */
+    --muted: 240 6% 20%;               /* dark grey */
+    --muted-foreground: 240 5% 65%;    /* mid-grey */
+
+    /* Status */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 240 6% 30%;              /* grey border */
+    --input: 240 6% 25%;               /* dark input background */
+    --ring: 262 83% 58%;               /* purple ring highlight */
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(248 16% 16%));
+    --gradient-secondary: linear-gradient(135deg, hsl(248 16% 13%), hsl(248 16% 10%));
+    --gradient-accent: linear-gradient(135deg, hsl(262 83% 70%), hsl(248 16% 13%));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.12);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.18), 0 2px 4px -1px hsl(0 0% 0% / 0.12);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.20), 0 4px 6px -2px hsl(0 0% 0% / 0.15);
+    --shadow-glow: 0 0 20px hsl(262 83% 58% / 0.32);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom utility classes for AI Assistant */
+@layer components {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+  
+  .card-glass {
+    background: hsl(var(--card) / 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+  
+  .ai-glow {
+    position: relative;
+  }
+  
+  .ai-glow::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    padding: 1px;
+    background: var(--gradient-primary);
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* Animation delay utilities */
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+  .animation-delay-700 {
+    animation-delay: 700ms;
+  }
+  .animation-delay-800 {
+    animation-delay: 800ms;
+  }
+  .animation-delay-1000 {
+    animation-delay: 1000ms;
+  }
+  .animation-delay-1500 {
+    animation-delay: 1500ms;
+  }
+  .animation-delay-2000 {
+    animation-delay: 2000ms;
+  }
+  .animation-delay-2500 {
+    animation-delay: 2500ms;
+  }
+}
